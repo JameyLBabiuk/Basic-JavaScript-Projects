@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Ternary Operator</h2>
+
+ <form>
+  <label for="marks" >Marks:</label><br>
+  <input type="text" min="0" max="100" id="marks"><br>
+  <button onclick="evaluateMarks();">Evaluate Marks</button><button onclick="showStudentName();">Full Name</button>
+  <button onclick="addValues(10,20);">Nested Functions</button>
+</form> 
+
+
+<script>
+
+    let result ="";
+
+    // function to evaluate your marks using a ternary operator
+      function evaluateMarks() {
+        let mark_val = document.getElementById("marks").value; // access the text field by id
+        let result = (mark_val >= 50) ? 'pass' : 'fail';
+        window.alert("Results: "+result)
+      }
+
+    // constructor using 'new' & 'this' keyword
+    function Student(first, last, age, eye) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    }
+
+    // Create First Student object
+    const firstStudent = new Student("John", "Doe", 12);
+
+
+    // Add a name method to first student
+    firstStudent.name = function() {
+        return this.firstName + " " + this.lastName;
+    };
+
+    // Show Students Name in Full
+    function showStudentName(){
+      document.getElementById("result").innerHTML ="The First Student is:" + firstStudent.name();
+      window.alert("The First Student is:" + firstStudent.name()) 
+    }
+
+    // nested functions
+    // outer function
+    function addValues(val_a,val_b)
+    {
+    //inner function
+    function showResults(text)
+    {
+        window.alert(text)
+    }
+    let sum_val=val_a+val_b;
+
+    //trigger the nested function
+    showResults("sum is "+ sum_val)
+    }
+
+      
+</script>
+
+<p>The end!</p>
+
+</body>
+</html>

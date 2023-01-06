@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The document.write() Method</h2>
+
+ <form>
+  <label for="fname" id="fname_label" >First name:</label><br>
+  <input type="text" value="John" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" value="Doe" id="lname" name="lname">
+  <p id="result"></p>
+</form> 
+
+
+<script>
+    // document.write() method in action
+    document.write("Exploring document.write method!");
+
+    // function to change the font color of the first name
+      function fontcolor() {
+         let txt = document.getElementById("fname_label"); // access the text field by id
+         let color = txt.style.color;
+         txt.style.color = 'red';
+      }
+    // function to concatenate the first and last name 
+      function concatenateVariables(){
+       let fname= document.getElementById("fname").value;
+       let lname= document.getElementById("lname").value;
+       let concatStr =fname +" "+lname
+       document.getElementById("result").innerHTML=concatStr
+      }
+    // function uses window.alert() method
+      function mine(){
+        window.alert("This is Assignment submission #1!!!")
+      }
+
+      mine();
+      concatenateVariables();
+      fontcolor();
+</script>
+
+<p>The end!</p>
+
+</body>
+</html>

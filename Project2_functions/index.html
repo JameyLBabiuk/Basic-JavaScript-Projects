@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Function that uses += Operator</h2>
+
+ <form>
+  <button onclick="sumIntegerValues();">Click to show Results</button>
+  <input type="text" id="result">
+</form> 
+
+
+<script>
+    // document.write() method in action
+    document.write("Exploring +=!");
+
+    // function to sum and return all the values from 0 to 10
+      function sumIntegerValues() {
+        let sumVal =0
+        for (let i = 0; i <= 10; i++) {
+            sumVal += i
+        }
+        
+        document.getElementById("result").value=sumVal
+      }
+      
+</script>
+
+<p>The end!</p>
+
+</body>
+</html>

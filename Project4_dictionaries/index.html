@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Dictionaries</h2>
+
+ <form>
+  <button onclick="funcDictionaries();">Show Person</button><button onclick="removeKeyInDictionary();">Delete Key</button>
+  <br/><br/><br/><br/>
+  <label>Person:</label><textarea id="person" rows="4" cols="50"></textarea><br/><br/>
+
+</form> 
+
+
+<script>
+    // function to show a dictionary
+      function funcDictionaries() {
+        const person = {fname:"John", lname:"Doe",age:"5",favColor:"white"};
+        let var_person ="FName:"+person.fname +" LName:"+person.lname+" Age:"+person.age +" Favorite Color:"+person.favColor;
+
+        // Display some data from the object:
+        document.getElementById("person").value = var_person;
+      }
+
+    // function to show a value whose key is deleted in dictionary
+    function removeKeyInDictionary() {
+        const person = {fname:"John", lname:"Doe",age:"5",favColor:"white"};
+
+   
+        let age_val =person['age']
+        delete person['age']
+        window.alert("Value[Age] for Deleted key is:"+age_val);
+      }
+
+      
+</script>
+
+<p>The end!</p>
+
+</body>
+</html>

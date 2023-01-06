@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Math Operators</h2>
+
+ <form>
+  <!-- <button onclick="sumOperator();">Add</button> -->
+  <br/>
+  <label>Addition:</label><input type="text" id="addition"><br/><br/>
+  <label>Subtraction:</label><input type="text" id="subtraction"><br/><br/>
+  <label>Multiplication:</label><input type="text" id="multiplication"><br/><br/>
+  <label>Modulus:</label><input type="text" id="modulus"><br/><br/>
+  <label>++ Operator:</label><input type="text" id="increment"><br/><br/>
+  <label>-- Operator:</label><input type="text" id="decrement"><br/><br/>
+  <label>Random Value:</label><input type="text" id="random_value"><br/><br/>
+</form> 
+
+
+<script>
+    var max_val =120
+    var min_val =50
+
+    // function to sum max_val and min_val
+      function sumOperator() {
+        let resVal =max_val + min_val;
+        return resVal;
+      }
+
+    // function to subtract max_val and min_val
+    function subtractionOperator() {
+        let resVal =max_val - min_val;
+        return resVal;
+      }
+
+    // function to multiply max_val and min_val
+    function multiplicationOperator() {
+        let resVal =max_val * min_val;
+        return resVal;
+      }
+
+    // function to mode max_val and min_val
+    function modulusOperator() {
+        let resVal =max_val % min_val;
+        return resVal;
+      }
+
+    // function to use ++ operator
+    function incrementOperator() {
+        let resVal =0;
+        for (let i = 0; i <= 10; i++) {
+            resVal ++;
+        }
+        return resVal;
+      }
+
+    // function to use -- operator
+    function decrementOperator() {
+        let resVal =10;
+        for (let i = 0; i <= 10; i++) {
+            resVal --;
+        }
+        return resVal;
+      }
+
+     // function to use Math.random()
+     function randomValueBetweenZeroAndOne() {
+        let resVal =Math.random()
+        return resVal;
+      }
+
+      document.getElementById("addition").value=sumOperator();
+      document.getElementById("subtraction").value=subtractionOperator();
+      document.getElementById("multiplication").value=multiplicationOperator();
+      document.getElementById("modulus").value=modulusOperator();
+      document.getElementById("increment").value=incrementOperator();
+      document.getElementById("decrement").value=decrementOperator();
+      document.getElementById("random_value").value=randomValueBetweenZeroAndOne();
+      
+</script>
+
+<p>The end!</p>
+
+</body>
+</html>

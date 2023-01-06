@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Scope Time Function</h2>
+
+ <form>
+  <button onclick="concat_method();">Concat Method</button><button onclick="slice_method();">Slice Method</button>
+  <button onclick="to_string();">toString Method</button><button onclick="to_precision();">toPrecision Method</button>
+</form> 
+
+
+<script>
+
+// function demonstrating concat()
+function concat_method( ) {
+    let firstVal = "milk";
+    let secondVal = "shake";
+    let resultVal = firstVal.concat(secondVal);
+    window.alert("Concatenation:"+resultVal)    
+}
+
+// function demonstrating slice()
+function slice_method( ) {
+    const comps = ['Chrome Book', 'Toshiba', 'Dell', 'Lenovo', 'IBM'];
+    window.alert("Slice in Play:"+comps.slice(3))    
+}
+
+// function to convert a number to string
+function to_string(){
+    let numVal = 63;
+    let textStr = numVal.toString();
+
+    var resultStr=typeof textStr;
+    window.alert("toString:"+resultStr)  
+}
+
+// function to illustrate the method toPrecision
+function to_precision(){
+    let numVar = 613.9373184;
+    let resVal = numVar.toPrecision(3);
+    window.alert("Number to precision 3:" +resVal)
+}
+
+
+      
+</script>
+
+<p>The end!</p>
+
+</body>
+</html>

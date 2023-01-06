@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Comparison Type Coercion</h2>
+
+ <form>
+  <button onclick="showDataType();">Show Data Type</button><button onclick="combineStringAndNumber();">Str & Int</button>
+  <button onclick="operatorValues();">Operators</button>
+  <br/><br/><br/><br/>
+
+</form> 
+
+
+<script>
+    // function to show the typeof dictionary
+      function showDataType() {
+        const person = {fname:"John", lname:"Doe",age:"5",favColor:"white"};
+
+        let dict_type =typeof person;
+        document.write("The Dictionary type is:"+ dict_type);
+  
+      }
+
+    // function to combine a String and a number
+    function combineStringAndNumber() {
+        const combination="I am coming home on:" + 5
+
+        document.write("String, Number Combination is:"+ combination);
+      }
+
+    function operatorValues(){
+        let booleanValue ="";
+        let equalityValue ="";
+        let greaterValue ="";
+        let smallerValue ="";
+        let andOperator ="";
+        let orOperator="";
+        let notOperator ="";
+
+        if(true == false){
+            booleanValue="They are Equal";
+        }else{
+            booleanValue="They are not Equal";
+            
+        }
+        // test equality operator
+        if('1'===1){
+            equalityValue="Correct Equality Operator";
+        }else{
+            equalityValue="Failed Equality Operator";
+        }
+        // test greater than Operator
+        if(100 > 98){
+            greaterValue="100 is greater than ninety eight"
+        }else{
+            greaterValue="100 is less than ninety eight" 
+        }
+        // test less than Operator
+        if(20 < 50){
+            smallerValue="20 is less than fifty"
+        }else{
+            smallerValue="20 is greater than fifty" 
+        }
+        // test && operator
+        let a =50 
+        let b = 68
+        if( a >= 50 && b >=50){
+            andOperator="Both values are 50 or greater"
+        }else{
+            andOperator="Not all the values are 50 or greater" 
+        }
+        // test || operator
+        if( a > 50 || b >=50){
+            orOperator="At least one Value is greater than 50"
+        }else{
+            orOperator="All the values are below 50" 
+        }
+        // test ! operator
+        if( a !=50){
+            notOperator="A and B are Equal" 
+        }else{
+            notOperator=" A and B are not Equal"
+        }
+
+        window.alert("Bool:::"+booleanValue+"\nEquality:"+equalityValue+
+        "\n> Operator:"+greaterValue+"\n< Operator:"+smallerValue+"\nAnd Operator:"+
+        andOperator+"\nOr Operator:"+orOperator+"\nNot Operator:"+notOperator)
+
+    }
+
+      
+</script>
+
+<p>The end!</p>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Scope Time Function</h2>
+
+ <form>
+  <button onclick="localOrGlobal();">Local or Global</button><button onclick="funcWithError();">Test Error</button>
+  <button onclick="time_function();">Time Now</button>
+</form> 
+
+
+<script>
+
+var resVal ="";
+var myVar = "global"; // global Variable
+function localOrGlobal( ) {
+    var myVar = "local";  // local variable
+
+    if(myVar =="global"){
+        resVal ="This is a global variable";
+    }else{
+        resVal ="This is a local variable";
+    }
+window.alert("Variable Scope::"+resVal)    
+}
+
+// function throwing an error because the variable has not been declared
+function funcWithError(){
+    
+    val +=10    
+    console.log("Error:"+val)
+    
+}
+
+// function to return the date and time now
+function time_function(){
+const date = new Date();
+window.alert(date);
+}
+
+      
+</script>
+
+<p>The end!</p>
+
+</body>
+</html>

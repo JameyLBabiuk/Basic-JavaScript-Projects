@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="slideshow-container">
+
+<div class="slider fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="first_image.jpeg" style="width:100%">
+  <div class="text">Innovation View</div>
+</div>
+
+<div class="slider fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="second_image.jpeg" style="width:100%">
+  <div class="text">Creative View</div>
+</div>
+
+<div class="slider fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="third_image.png" style="width:100%">
+  <div class="text">Oceanic View</div>
+</div>
+
+<a class="prev" onclick="nextSlide(-1)">❮</a>
+<a class="next" onclick="nextSlide(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="selectedSlide(1)"></span> 
+  <span class="dot" onclick="selectedSlide(2)"></span> 
+  <span class="dot" onclick="selectedSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+slideView(slideIndex);
+
+function nextSlide(n) {
+    slideView(slideIndex += n);
+}
+
+function selectedSlide(n) {
+   slideView(slideIndex = n);
+}
+
+function slideView(n) {
+  let i;
+  let slides = document.getElementsByClassName("slider");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
